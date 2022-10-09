@@ -20,15 +20,15 @@
                     <?php for ($j = 1; $j <= $save_demand; $j++) : ?>
                         <!-- jika nilai biaya yang sudah dihitung > 0 -->
                         <?php if ($arr[$i][$j] > 0) : ?>
-                            <td>
+                            <td class="py-0 pr-0">
                                 <table>
                                     <td rowspan='1' width='50' class="border-0 pt-4">
                                         <!-- nilai biaya yang sudah dihitung-->
                                         <?= $arr[$i][$j]; ?>
                                     </td>
                                     <div>
-                                        <td class="border-0 p-0">
-                                            <div class="border-left border-bottom px-1 py-1">
+                                        <td class="border-0 py-0 pr-0">
+                                            <div class="border-left border-bottom px-2 py-2">
                                                 <!-- nilai biaya yang di input-->
                                                 <?= $cost[$i][$j]; ?>
                                             </div>
@@ -37,10 +37,10 @@
                                 </table>
                             </td>
                         <?php else : ?>
-                            <td>
+                            <td class="py-0 pr-0">
                                 <table>
-                                    <td rowspan='1' width='50' class="border-0">0</td>
-                                    <td class="border-0 py-1">
+                                    <td rowspan='1' width='50' class="border-0 pt-4">0</td>
+                                    <td class="border-0 py-0 pr-0">
                                         <div class="border-left border-bottom px-2 py-2">
                                             <!-- nilai biaya yang di input-->
                                             <?= $cost[$i][$j]; ?>
@@ -63,7 +63,7 @@
                 <td>Total Demand</td>
                 <?php for ($i = 1; $i <= $save_demand; $i++) : ?>
                     <!-- menampilkan data demand -->
-                    <td class="text-center"><?= $get_demand[$i]; ?></td>
+                    <td class="text-center align-middle"><?= $get_demand[$i]; ?></td>
                 <?php endfor; ?>
                 <td class="text-center align-middle"><?= $total_demand_copy - $total_supply_copy; ?></td>
 
@@ -84,8 +84,6 @@
                             <!-- keterangan jumlah hasil perhitungan -->
                             <?= $cost[$i][$j] * $arr[$i][$j] ?> &nbsp;
                             <br/>
-                        <!-- <?php else : ?>
-                            <?php continue; ?> -->
                         <?php endif; ?>
                     <?php endfor; ?>
                 <?php endfor; ?>
