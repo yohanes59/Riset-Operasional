@@ -19,7 +19,7 @@
 						<!-- field untuk input biaya -->
 						<?php for ($j = 1; $j <= $demand; $j++) : ?>
 							<td>
-								<div class="form-group" style="max-width: 50px;">
+								<div class="form-group" style="width: 50px;">
 									<!-- membuat array 2 dimensi -->
 									<input type="text" class="form-control" name="cost[<?= $i ?>][<?= $j ?>]">
 								</div>
@@ -27,7 +27,7 @@
 						<?php endfor; ?>
 
 						<td>
-							<div class="form-group" style="max-width: 50px;">
+							<div class="form-group" style="width: 50px;">
 								<!-- field untuk input nilai kapasitas yang dibutuhkan -->
 								<!-- membuat array 1 dimensi -->
 								<input type="text" class="form-control" name="supply[<?= $i ?>]">
@@ -41,7 +41,7 @@
 					<!-- field untuk input nilai kebutuhan yang dibutuhkan -->
 					<?php for ($i = 1; $i <= $demand; $i++) : ?>
 						<td>
-							<div class="form-group" style="max-width: 50px;">
+							<div class="form-group" style="width: 50px;">
 								<!-- membuat array 1 dimensi -->
 								<input type="text" class="form-control" name="demand[<?= $i ?>]">
 							</div>
@@ -50,11 +50,11 @@
 					<td></td>
 				</tr>
 
-				<div class="form-group" style="max-width: 50px;" hidden>
+				<div class="form-group" style="width: 50px;" hidden>
 					<!-- menyimpan nilai demand ke variabel s_demand-->
 					<input type="text" class="form-control" name="save_demand" value="<?= $demand ?>">
 				</div>
-				<div class="form-group" style="max-width: 50px;" hidden>
+				<div class="form-group" style="width: 50px;" hidden>
 					<!-- menyimpan nilai supply ke variabel s_supply-->
 					<input type="text" class="form-control" name="save_supply" value="<?= $supply ?>">
 				</div>
